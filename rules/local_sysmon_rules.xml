@@ -1,0 +1,14 @@
+<group name="local,sysmon,">
+
+    <rule id="110301" level="12">
+      <if_group>sysmon_event8</if_group>
+      <field name="win.eventdata.targetImage">lsass.exe</field>
+      <description>Sysmon - CreateRemoteThread - lsass.exe</description>
+    </rule>
+
+    <rule id="110302" level="12">
+      <if_group>sysmon_event3</if_group>
+      <field name="win.eventdata.image">powershell.exe</field>
+      <description>Sysmon - Network Connection - powershell.exe</description>
+    </rule>
+</group>
